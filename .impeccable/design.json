@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T11:20:00+08:00",
+  "title": "Design System: 行政综合四模块 PC 原型",
+  "extensions": {
+    "colorMeta": {
+      "primary": {"role":"primary","displayName":"工作台蓝","canonical":"#0865b7","tonalRamp":["#062642","#07436f","#075895","#0865b7","#2f82c6","#73afe0","#b9d7f2","#e5f0ff"]},
+      "workspace": {"role":"neutral","displayName":"冷灰工作区","canonical":"#f3f5f8","tonalRamp":["#18212b","#39434f","#5e6a77","#7d8b9c","#a9b3bf","#d1d8e0","#e7ebf0","#f3f5f8"]}
+    },
+    "typographyMeta": {
+      "title": {"displayName":"页面标题","purpose":"后台主标题和门户详情标题"},
+      "body": {"displayName":"业务正文","purpose":"表单、表格与文章正文"},
+      "label": {"displayName":"字段标签","purpose":"筛选、表单标签与元信息"}
+    },
+    "shadows": [
+      {"name":"overlay","value":"0 26px 70px rgba(4,25,48,.28)","purpose":"模态弹窗"},
+      {"name":"fixed-actions","value":"0 -8px 20px rgba(26,64,108,.07)","purpose":"固定底部操作栏"}
+    ],
+    "breakpoints": [{"name":"wide-workbench","value":"1600px"},{"name":"desktop-compact","value":"1540px"},{"name":"desktop-min","value":"1366px"},{"name":"low-height","value":"800px"}]
+  },
+  "components": [
+    {"name":"Primary Button","kind":"button","refersTo":"button-primary","description":"单一区域主动作","html":"<button class=\"ds-btn-primary\">提交审批</button>","css":".ds-btn-primary{height:32px;padding:0 12px;border:1px solid #0768bb;border-radius:2px;background:#0768bb;color:#fff}.ds-btn-primary:hover{background:#005aa5}.ds-btn-primary:focus-visible{outline:3px solid rgba(24,126,223,.28);outline-offset:2px}"},
+    {"name":"Text Input","kind":"input","refersTo":"input","description":"紧凑业务字段","html":"<input class=\"ds-input\" placeholder=\"请输入标题\">","css":".ds-input{height:32px;padding:0 10px;border:1px solid #d6dee8;border-radius:2px;color:#172b40}.ds-input:hover{border-color:#8cb9df}.ds-input:focus{outline:0;border-color:#1578ca;box-shadow:0 0 0 2px rgba(21,120,202,.12)}"}
+  ],
+  "narrative": {
+    "northStar": "企业级蓝白工作台",
+    "overview": "高频办公以扫读、批量操作和状态判断为先，采用参考图中的蓝色工作台、白色树形侧栏、贴边信息板块和紧凑数据网格。",
+    "keyCharacteristics": ["44px 蓝色顶部导航、34px 页签与搜索型白色侧栏","细边框、灰蓝表头、2px 低圆角控件","门户上下文带、编辑式2比1新闻区、三列信息布局","后台查询—批处理—数据账本连续节奏","编辑页严格2比1且底栏固定"],
+    "rules": [{"name":"One Accent","body":"同一操作区域只保留一个实心蓝色主动作。","section":"colors"}],
+    "dos": ["Do 保持表单、筛选和表格的紧凑节奏。","Do 用明确状态文字配合颜色。"],
+    "donts": ["Don't 恢复深色侧栏或大卡片。","Don't 机械统一四模块能力。"]
+  }
+}
